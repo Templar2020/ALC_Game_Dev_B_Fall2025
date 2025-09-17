@@ -16,8 +16,8 @@ public class Balloon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Reference ScoreManager Component*
-        //scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        //Reference ScoreManager Component
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
     void OnMouseDown()
@@ -29,7 +29,7 @@ public class Balloon : MonoBehaviour
         // Check to see if the balloon has popped
         if(clickToPop == 0)
         {
-            //scoreManager.IncreaseScoreText(scoreToGive); // Increase Score*
+            scoreManager.IncreaseScoreText(scoreToGive); // Increase Score
             //Instantiate(popEffect, transform.position, transform.rotation); // Instantiate Particle Effect - POP Effect*
             Destroy(gameObject);// POP Balloon
         }
