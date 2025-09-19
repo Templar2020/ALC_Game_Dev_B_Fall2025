@@ -30,7 +30,7 @@ public class Balloon : MonoBehaviour
         if(clickToPop == 0)
         {
             scoreManager.IncreaseScoreText(scoreToGive); // Increase Score
-            //Instantiate(popEffect, transform.position, transform.rotation); // Instantiate Particle Effect - POP Effect*
+            Instantiate(popEffect, transform.position, transform.rotation); // Instantiate Particle Effect - POP Effect
             Destroy(gameObject);// POP Balloon
         }
     }
